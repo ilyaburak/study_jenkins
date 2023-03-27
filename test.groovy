@@ -1,5 +1,5 @@
 pipeline {
-    agent{node('master')}
+
     stages {
         stage ('Download from git'){
             steps {
