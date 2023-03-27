@@ -1,5 +1,5 @@
 pipeline {
-
+    agent {node ('Built-In Node')}
     stages {
         stage ('Download from git'){
             steps {
