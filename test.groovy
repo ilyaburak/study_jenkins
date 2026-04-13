@@ -10,10 +10,17 @@ pipeline {
                     extensions: [[$class: 'RelativeTargetDirectory',
                     relativeTargetDir: 'test']],
                     submoduleCfg: [],
-                    userRemoteConfigs: [[credentialsId: 'github_cred',url: 'https://github.com/ilyaburak/study_jenkins.git']]])
+                    userRemoteConfigs: [[credentialsId: 'git_cred',url: 'https://github.com/ilyaburak/study_jenkins.git']]])
                 
-                }}}
-        
+                }}
+        }
+        stage ('run shell command') {
+            steps{
+                script{
+                    sh 'ps -ef'
+                }
+            }
+        }
        
     }
     
