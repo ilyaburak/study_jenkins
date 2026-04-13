@@ -18,6 +18,7 @@ pipeline {
             steps{
                 script{
                     sh 'ps -ef'
+                    currentBuild.Result = 'FAILURE'
                 }
             }
         }
